@@ -612,13 +612,13 @@
                             let activePrice = rData.price || parseInt(card.dataset.roomPrice || '0');
                             let originalPrice = rData.price;
                             let isDiscounted = rData.discount > 0;
-                            
+
                             if (isDiscounted) {
                                 activePrice = Math.round(originalPrice * (1 - rData.discount / 100));
                             }
-                            
+
                             card.dataset.roomPrice = activePrice;
-                            
+
                             const priceEl = card.querySelector('.price-amount');
                             if (priceEl) {
                                 if (isDiscounted) {
@@ -641,7 +641,7 @@
                                     if (badge) badge.remove();
                                 }
                             }
-                            
+
                             if (rData.maintenance) {
                                 card.classList.add('in-maintenance');
                                 const btn = card.querySelector('.room-btn');
@@ -657,7 +657,7 @@
                         }
                     });
                 }
-                
+
                 // Rebuild roomsData array
                 roomsData.length = 0;
                 roomCards.forEach(card => {
@@ -670,7 +670,7 @@
                     });
                 });
                 if (!roomsData.length) roomsData.push({ key: 'standard', name: 'غرفة', price: 0 });
-                
+
                 roomsByKey.clear();
                 roomsData.forEach(r => roomsByKey.set(r.key, r));
                 ensureRoomOptions(); // refresh dropdown
