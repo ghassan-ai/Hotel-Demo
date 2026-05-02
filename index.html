@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فندق الأحلام</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- High-Impact Interactive Background -->
+    <div id="particles-js" class="particles-bg"></div>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><i class="fas fa-crown"></i> فندق الأحلام</a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">الرئيسية</a>
+                <a href="#rooms">الغرف</a>
+                <a href="#services">الخدمات</a>
+                <a href="#gallery">المعرض</a>
+                <a href="#testimonials">آراء النزلاء</a>
+                <a href="#contact">تواصل</a>
+            </nav>
+            <a class="nav-btn nav-book-btn" href="#rooms">احجز الآن</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <!-- تذكير: يفضل استخدام صيغة WebP لجميع الصور مستقبلاً لتحسين الأداء -->
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active"
+                style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&q=80');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80');">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">فندق خمس نجوم</div>
+            <h1 class="hero-title">تجربة إقامة راقية</h1>
+            <div class="hero-divider">
+                <span></span>
+                <i class="fas fa-star"></i>
+                <span></span>
+            </div>
+            <div class="hero-tagline">رفاهية، هدوء، وخدمة استثنائية</div>
+            <div class="hero-location"><i class="fas fa-map-marker-alt"></i> قلب المدينة</div>
+            <a class="hero-btn" href="#rooms">استعرض الغرف <i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="hero-scroll">
+            <span>اكتشف المزيد</span>
+            <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+        </div>
+    </section>
+
+    <section class="rooms section" id="rooms">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">غرف مميزة</div>
+                <h2 class="section-title">اختر الغرفة المناسبة لك</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="rooms-grid">
+                <article class="room-card fade-in" data-room-key="deluxe" data-room-name="غرفة ديلوكس"
+                    data-room-price="250" data-room-capacity="2">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80"
+                            alt="غرفة ديلوكس" loading="lazy">
+                        <span class="room-badge featured">الأكثر طلبا</span>
+                        <div class="room-price">
+                            <div class="price-amount">$250</div>
+                            <div class="price-period">/ الليلة</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>غرفة ديلوكس</h3>
+                        <p>تصميم عصري وإطلالة مذهلة مع كل وسائل الراحة.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-users"></i> 2 ضيوف</li>
+                            <li><i class="fas fa-bed"></i> سرير كينغ</li>
+                            <li><i class="fas fa-wifi"></i> واي فاي</li>
+                            <li><i class="fas fa-coffee"></i> إفطار مجاني</li>
+                        </ul>
+                        <a href="#contact" class="room-btn btn-book">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="room-card fade-in" data-room-key="suite" data-room-name="جناح عائلي"
+                    data-room-price="420" data-room-capacity="4">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=900&q=80"
+                            alt="جناح عائلي" loading="lazy">
+                        <span class="room-badge premium">عائلي</span>
+                        <div class="room-price">
+                            <div class="price-amount">$420</div>
+                            <div class="price-period">/ الليلة</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>جناح عائلي</h3>
+                        <p>مساحة واسعة للعائلة مع صالة خاصة وإطلالة بانورامية.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-users"></i> 4 ضيوف</li>
+                            <li><i class="fas fa-couch"></i> صالة خاصة</li>
+                            <li><i class="fas fa-tv"></i> شاشة ذكية</li>
+                            <li><i class="fas fa-bath"></i> حمام فاخر</li>
+                        </ul>
+                        <a href="#contact" class="room-btn btn-book">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+
+                <article class="room-card fade-in" data-room-key="standard" data-room-name="غرفة تنفيذية"
+                    data-room-price="320" data-room-capacity="2">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=900&q=80"
+                            alt="غرفة تنفيذية" loading="lazy">
+                        <span class="room-badge">تنفيذية</span>
+                        <div class="room-price">
+                            <div class="price-amount">$320</div>
+                            <div class="price-period">/ الليلة</div>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>غرفة تنفيذية</h3>
+                        <p>مثالية لرجال الأعمال مع مكتب عمل وخدمات خاصة.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-users"></i> 2 ضيوف</li>
+                            <li><i class="fas fa-briefcase"></i> مكتب عمل</li>
+                            <li><i class="fas fa-concierge-bell"></i> خدمة خاصة</li>
+                            <li><i class="fas fa-wifi"></i> إنترنت سريع</li>
+                        </ul>
+                        <a href="#contact" class="room-btn btn-book">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">خدماتنا</div>
+                <h2 class="section-title">كل ما تحتاجه لإقامة مثالية</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-spa"></i></div>
+                    <h3>سبا فاخر</h3>
+                    <p>جلسات استرخاء ومرافق صحية متكاملة.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>مطعم عالمي</h3>
+                    <p>تجارب طعام راقية بنكهات عالمية.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-swimming-pool"></i></div>
+                    <h3>مسبح بانورامي</h3>
+                    <p>إطلالة ساحرة مع خدمات ضيافة فاخرة.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>نادي رياضي</h3>
+                    <p>معدات متطورة مع مدربين محترفين.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">معرض الصور</div>
+                <h2 class="section-title">لمحات من الفندق</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80" alt="الواجهة"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>الواجهة الرئيسية</span>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="الغرف"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>غرفة بإطلالة</span>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&q=80" alt="الجناح"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>جناح فاخر</span>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210c9?w=600&q=80" alt="المطعم"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>المطعم</span>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80" alt="الردهة"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>الردهة</span>
+                    </div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="السبا"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>السبا</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-right"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="عرض الصورة">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <section class="testimonials section" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">آراء النزلاء</div>
+                <h2 class="section-title">تجارب مميزة لنزلائنا</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="testimonials-slider" id="testimonialSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"أفضل إقامة عشتها، الفريق متعاون والخدمة احترافية للغاية."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80"
+                                alt="سارة" loading="lazy">
+                            <div>
+                                <h4>سارة أحمد</h4>
+                                <span>ضيفة من دبي</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"الغرف واسعة ونظيفة، والموقع قريب من كل شيء."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80" alt="عمر"
+                                loading="lazy">
+                            <div>
+                                <h4>عمر خالد</h4>
+                                <span>مسافر أعمال</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"تجربة راقية من الاستقبال وحتى المغادرة."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=200&q=80" alt="ليلى"
+                                loading="lazy">
+                            <div>
+                                <h4>ليلى منصور</h4>
+                                <span>سائحة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" id="testimonialDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle">تواصل معنا</div>
+                <h2 class="section-title">نحن هنا لخدمتك</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>الموقع</h4>
+                            <p>شارع الملك، وسط المدينة</p>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <a href="tel:71094407">71094407</a>
+                        </div>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <a href="mailto:ghassanobeid7@gmail.com">ghassanobeid7@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map fade-in">
+                    <iframe title="خريطة الموقع"
+                        src="https://maps.google.com/maps?q=Lebanon&t=&z=7&ie=UTF8&iwloc=&output=embed"
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo"><i class="fas fa-crown"></i> فندق الأحلام</div>
+                    <p>نقدم تجربة إقامة استثنائية تجمع بين الراحة والفخامة في قلب المدينة.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#rooms">الغرف</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#gallery">المعرض</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>المزيد</h4>
+                    <ul>
+                        <li><a href="#testimonials">آراء النزلاء</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                        <li><a href="admin.html">لوحة التحكم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 فندق الأحلام. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+    <div class="booking-modal-overlay" id="bookingModalOverlay" aria-hidden="true">
+        <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+            <button class="booking-modal-close" id="closeBookingModal" type="button"><i
+                    class="fas fa-times"></i></button>
+            <div class="booking-modal-header">
+                <i class="fas fa-crown booking-modal-icon"></i>
+                <h2 id="bookingModalTitle">إتمام الحجز</h2>
+                <div class="booking-modal-room" id="modalRoomName">غرفة ديلوكس</div>
+            </div>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <!-- الاسم الكامل -->
+                    <div class="booking-form-row">
+                        <div class="booking-form-group booking-form-full">
+                            <label><i class="fas fa-user"></i> الاسم الكامل</label>
+                            <input type="text" id="b-name" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                    </div>
+
+                    <!-- رقم الهاتف (intl-tel-input) -->
+                    <div class="booking-form-row">
+                        <div class="booking-form-group booking-form-full">
+                            <label><i class="fas fa-phone"></i> رقم الهاتف</label>
+                            <div class="phone-input-wrap">
+                                <input type="tel" id="b-phone" required placeholder="رقم هاتفك" inputmode="tel">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني + نوع الغرفة -->
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-envelope"></i> البريد الإلكتروني (اختياري)</label>
+                            <input type="email" id="b-email" placeholder="email@example.com">
+                        </div>
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-bed"></i> نوع الغرفة</label>
+                            <select id="b-room-select" required></select>
+                        </div>
+                    </div>
+
+                    <!-- تاريخ الوصول + تاريخ المغادرة -->
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-calendar-check"></i> تاريخ الوصول</label>
+                            <input type="date" id="b-checkin" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-calendar-times"></i> تاريخ المغادرة</label>
+                            <input type="date" id="b-checkout" required>
+                        </div>
+                    </div>
+
+                    <!-- عدد الضيوف + السعر لليلة -->
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-users"></i> عدد الضيوف <span id="b-guests-max"
+                                    style="font-size: 0.75rem; color: var(--text); font-weight: normal;"></span></label>
+                            <input type="number" id="b-guests" min="1" value="1" required>
+                        </div>
+                        <div class="booking-form-group">
+                            <label><i class="fas fa-dollar-sign"></i> السعر لليلة</label>
+                            <input type="text" id="b-price-night" readonly>
+                        </div>
+                    </div>
+
+                    <div class="booking-summary">
+                        <div class="booking-summary-row">
+                            <span>عدد الليالي:</span>
+                            <span id="b-nights">0</span>
+                        </div>
+                        <div class="booking-summary-row booking-summary-total">
+                            <span>الإجمالي:</span>
+                            <span id="b-total">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="booking-error" id="bookingError" style="display:none;"></div>
+                    <button type="submit" class="booking-submit-btn" id="bookingSubmitBtn">
+                        <span id="bookingBtnText">تأكيد الحجز</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal"
+        style="display: none; z-index: 10000; position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div
+            style="background: var(--gray); padding: 40px; border-radius: 20px; text-align: center; max-width: 420px; width: 90%; border: 1px solid var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative;">
+            <button id="closeConfirmModal"
+                style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #333; font-size: 1.2rem; cursor: pointer;"><i
+                    class="fas fa-times"></i></button>
+            <div style="font-size: 4rem; color: var(--primary); margin-bottom: 20px;">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 10px;">خطوة أخيرة
+                للتأكيد</h3>
+            <p style="color: var(--text); font-size: 0.95rem; line-height: 1.8; margin-bottom: 25px;">
+                لتأكيد حجزك، يرجى إرسال تفاصيل الطلب إلينا عبر <strong>واتساب</strong> أو <strong>البريد
+                    الإلكتروني</strong>.<br>
+                لقد جهّزنا الرسالة لك مسبقاً — فقط اضغط وأرسل!
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <button type="button" id="btnConfirmWhatsapp"
+                    style="background: #25D366; color: #fff; border: none; padding: 14px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; transition: all 0.3s ease;">
+                    <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> إرسال عبر واتساب
+                </button>
+                <div style="display: flex; align-items: center; gap: 15px; margin: 5px 0;">
+                    <div style="flex: 1; height: 1px; background: rgba(201,168,76,0.3);"></div>
+                    <span style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">أو</span>
+                    <div style="flex: 1; height: 1px; background: rgba(201,168,76,0.3);"></div>
+                </div>
+                <button type="button" id="btnConfirmEmail"
+                    style="background: var(--dark); color: var(--light); border: 2px solid var(--primary); padding: 14px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 44px; transition: all 0.3s ease;">
+                    <i class="fas fa-envelope" style="font-size: 1.1rem;"></i> إرسال عبر الإيميل
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-toast" id="bookingToast" role="status" aria-live="polite">
+        <i class="fas fa-check-circle" style="color: #2ecc71; margin-left: 8px;"></i>
+        تم استلام طلب الحجز بنجاح! سنتواصل معك قريباً.
+    </div>
+
+    <a class="whatsapp-float" href="https://wa.me/71094407" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">تحدث معنا</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/intlTelInput.min.js"></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+        import { getFirestore, collection, addDoc, serverTimestamp, getDoc, doc } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+
+        const app = initializeApp({
+            apiKey: "AIzaSyAROKA5gZ1ymy6Ws4DkC62qvT6awB2_Wy8",
+            authDomain: "hotel-test-adfc3.firebaseapp.com",
+            projectId: "hotel-test-adfc3",
+            storageBucket: "hotel-test-adfc3.firebasestorage.app",
+            messagingSenderId: "194362537310",
+            appId: "1:194362537310:web:4aebf28bfae4540d8d8bcf"
+        });
+        const db = getFirestore(app);
+
+        const modal = document.getElementById('bookingModalOverlay');
+        const closeBtn = document.getElementById('closeBookingModal');
+        const form = document.getElementById('bookingForm');
+        const bookingError = document.getElementById('bookingError');
+        const roomNameLabel = document.getElementById('modalRoomName');
+        const roomSelect = document.getElementById('b-room-select');
+        const priceNight = document.getElementById('b-price-night');
+        const nightsLabel = document.getElementById('b-nights');
+        const totalLabel = document.getElementById('b-total');
+        const checkin = document.getElementById('b-checkin');
+        const checkout = document.getElementById('b-checkout');
+        const phoneInput = document.getElementById('b-phone');
+
+        // Arabic and English names mapping for smart search
+        const countryNames = {
+            "lb": "لبنان Lebanon", "sa": "السعودية Saudi Arabia", "ae": "الإمارات UAE", "eg": "مصر Egypt", "jo": "الأردن Jordan",
+            "kw": "الكويت Kuwait", "qa": "قطر Qatar", "bh": "البحرين Bahrain", "om": "عُمان Oman", "iq": "العراق Iraq",
+            "sy": "سوريا Syria", "ps": "فلسطين Palestine", "ly": "ليبيا Libya", "tn": "تونس Tunisia", "dz": "الجزائر Algeria",
+            "ma": "المغرب Morocco", "sd": "السودان Sudan", "ye": "اليمن Yemen", "tr": "تركيا Turkey", "ir": "إيران Iran",
+            "de": "ألمانيا Germany", "fr": "فرنسا France", "gb": "المملكة المتحدة UK", "us": "أمريكا USA", "ca": "كندا Canada",
+            "au": "أستراليا Australia", "it": "إيطاليا Italy", "es": "إسبانيا Spain", "nl": "هولندا Netherlands", "se": "السويد Sweden",
+            "ch": "سويسرا Switzerland", "ru": "روسيا Russia", "cn": "الصين China", "jp": "اليابان Japan", "in": "الهند India"
+        };
+
+        // Initialize intl-tel-input (v23 API)
+        const iti = window.intlTelInput(phoneInput, {
+            initialCountry: 'lb',
+            preferredCountries: ['lb', 'sa', 'ae', 'eg', 'jo'],
+            showSelectedDialCode: true,
+            countrySearch: true,
+            nationalMode: false,
+            formatOnDisplay: true,
+            autoPlaceholder: 'aggressive',
+            dropdownContainer: document.body,
+            i18n: {
+                searchPlaceholder: "ابحث بالاسم أو الرمز (+966)",
+                ...countryNames
+            },
+            utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js',
+        });
+        const bookButtons = document.querySelectorAll('.btn-book');
+
+        const roomCards = Array.from(document.querySelectorAll('.room-card'));
+        const roomsData = [];
+        const roomsByKey = new Map();
+
+        const syncRoomsFromFirebase = async () => {
+            try {
+                const docSnap = await getDoc(doc(db, 'settings', 'rooms'));
+                if (docSnap.exists()) {
+                    const fbRooms = docSnap.data();
+                    roomCards.forEach(card => {
+                        const key = card.dataset.roomKey;
+                        const rData = fbRooms[key];
+                        if (rData) {
+                            let activePrice = rData.price || parseInt(card.dataset.roomPrice || '0');
+                            let originalPrice = rData.price;
+                            let isDiscounted = rData.discount > 0;
+                            
+                            if (isDiscounted) {
+                                activePrice = Math.round(originalPrice * (1 - rData.discount / 100));
+                            }
+                            
+                            card.dataset.roomPrice = activePrice;
+                            
+                            const priceEl = card.querySelector('.price-amount');
+                            if (priceEl) {
+                                if (isDiscounted) {
+                                    priceEl.innerHTML = `<del style="font-size: 0.8rem; color: #aaa; margin-left: 5px;">$${originalPrice}</del> $${activePrice}`;
+                                    let badge = card.querySelector('.room-discount-badge');
+                                    if (!badge) {
+                                        badge = document.createElement('span');
+                                        badge.className = 'room-badge room-discount-badge';
+                                        badge.style.background = '#e74c3c';
+                                        badge.style.color = '#fff';
+                                        badge.style.right = 'auto';
+                                        badge.style.left = '15px';
+                                        const imgWrap = card.querySelector('.room-image');
+                                        if (imgWrap) imgWrap.appendChild(badge);
+                                    }
+                                    badge.textContent = `خصم ${rData.discount}%`;
+                                } else {
+                                    priceEl.textContent = `$${activePrice}`;
+                                    const badge = card.querySelector('.room-discount-badge');
+                                    if (badge) badge.remove();
+                                }
+                            }
+                            
+                            if (rData.maintenance) {
+                                card.classList.add('in-maintenance');
+                                const btn = card.querySelector('.room-btn');
+                                if (btn) {
+                                    btn.textContent = 'الغرفة في صيانة';
+                                    btn.classList.add('disabled');
+                                    btn.style.background = '#555';
+                                    btn.style.pointerEvents = 'none';
+                                }
+                            } else {
+                                card.classList.remove('in-maintenance');
+                            }
+                        }
+                    });
+                }
+                
+                // Rebuild roomsData array
+                roomsData.length = 0;
+                roomCards.forEach(card => {
+                    if (card.classList.contains('in-maintenance')) return;
+                    roomsData.push({
+                        key: card.dataset.roomKey || 'standard',
+                        name: card.dataset.roomName || card.querySelector('h3')?.textContent || 'غرفة',
+                        price: parseInt(card.dataset.roomPrice || '0', 10),
+                        capacity: parseInt(card.dataset.roomCapacity || '2', 10)
+                    });
+                });
+                if (!roomsData.length) roomsData.push({ key: 'standard', name: 'غرفة', price: 0 });
+                
+                roomsByKey.clear();
+                roomsData.forEach(r => roomsByKey.set(r.key, r));
+                ensureRoomOptions(); // refresh dropdown
+            } catch (err) {
+                console.error("Error loading dynamic rooms:", err);
+            }
+        };
+
+        syncRoomsFromFirebase();
+
+        let currentRoomKey = 'standard';
+        let currentRoomName = 'غرفة';
+        let currentRoomPrice = 0;
+        let currentRoomCapacity = 2;
+
+        const setModalOpen = (isOpen) => {
+            if (!modal) return;
+            modal.classList.toggle('active', isOpen);
+            modal.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+            document.body.classList.toggle('modal-open', isOpen);
+        };
+
+        const getRoomData = (trigger) => {
+            const card = trigger ? trigger.closest('.room-card') : null;
+            const source = card || roomCards[0];
+            if (!source) {
+                return roomsData[0] || { key: 'standard', name: 'غرفة', price: 0 };
+            }
+            return {
+                key: source.dataset.roomKey || 'standard',
+                name: source.dataset.roomName || source.querySelector('h3')?.textContent || 'غرفة',
+                price: parseInt(source.dataset.roomPrice || '0', 10),
+                capacity: parseInt(source.dataset.roomCapacity || '2', 10)
+            };
+        };
+
+        const resetSummary = () => {
+            nightsLabel.textContent = '0';
+            totalLabel.textContent = '$0';
+        };
+
+        const calculateTotal = () => {
+            if (!checkin.value || !checkout.value) {
+                resetSummary();
+                return;
+            }
+            const inDate = new Date(checkin.value);
+            const outDate = new Date(checkout.value);
+            if (isNaN(inDate) || isNaN(outDate) || outDate <= inDate) {
+                resetSummary();
+                return;
+            }
+            const nights = Math.ceil((outDate - inDate) / (1000 * 60 * 60 * 24));
+            nightsLabel.textContent = String(nights);
+            totalLabel.textContent = `$${nights * currentRoomPrice}`;
+        };
+
+        const ensureRoomOptions = () => {
+            if (!roomSelect) return;
+            roomSelect.innerHTML = roomsData.map((room) => (
+                `<option value="${room.key}">${room.name}</option>`
+            )).join('');
+        };
+
+        const applyRoomSelection = (roomKey) => {
+            const room = roomsByKey.get(roomKey) || roomsData[0];
+            if (!room) return;
+            currentRoomKey = room.key;
+            currentRoomName = room.name;
+            currentRoomPrice = room.price;
+            currentRoomCapacity = room.capacity;
+            roomNameLabel.textContent = currentRoomName;
+            if (roomSelect) roomSelect.value = currentRoomKey;
+            priceNight.value = `$${currentRoomPrice}`;
+
+            const guestsInput = document.getElementById('b-guests');
+            const guestsMaxLabel = document.getElementById('b-guests-max');
+            if (guestsInput && guestsMaxLabel) {
+                guestsInput.max = currentRoomCapacity;
+                guestsMaxLabel.textContent = `(أقصى حد: ${currentRoomCapacity})`;
+                if (parseInt(guestsInput.value, 10) > currentRoomCapacity) {
+                    guestsInput.value = currentRoomCapacity;
+                }
+            }
+            calculateTotal();
+        };
+
+        const getFullPhone = () => {
+            return iti.getNumber();
+        };
+
+        const openModal = (trigger) => {
+            const roomData = getRoomData(trigger);
+
+            if (form) form.reset();
+            ensureRoomOptions();
+            applyRoomSelection(roomData.key);
+            bookingError.style.display = 'none';
+
+            resetSummary();
+            setModalOpen(true);
+        };
+
+        const closeModal = () => setModalOpen(false);
+
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        bookButtons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(btn);
+            });
+        });
+
+        if (roomSelect) {
+            roomSelect.addEventListener('change', () => {
+                applyRoomSelection(roomSelect.value);
+            });
+        }
+
+        if (checkin) {
+            const today = new Date();
+            const todayStr = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+            checkin.setAttribute('min', todayStr);
+
+            checkin.addEventListener('change', () => {
+                if (checkin.value) {
+                    const parts = checkin.value.split('-');
+                    if (parts.length === 3) {
+                        const inDate = new Date(parts[0], parts[1] - 1, parts[2]);
+                        inDate.setDate(inDate.getDate() + 1);
+                        const nextDayStr = inDate.getFullYear() + '-' + String(inDate.getMonth() + 1).padStart(2, '0') + '-' + String(inDate.getDate()).padStart(2, '0');
+                        checkout.setAttribute('min', nextDayStr);
+
+                        if (checkout.value && checkout.value <= checkin.value) {
+                            checkout.value = nextDayStr;
+                        }
+                    }
+                }
+                calculateTotal();
+            });
+        }
+        if (checkout) checkout.addEventListener('change', calculateTotal);
+
+        const guestsInput = document.getElementById('b-guests');
+        if (guestsInput) {
+            guestsInput.addEventListener('input', () => {
+                if (parseInt(guestsInput.value, 10) > currentRoomCapacity) {
+                    guestsInput.value = currentRoomCapacity;
+                    const maxLabel = document.getElementById('b-guests-max');
+                    if (maxLabel) {
+                        maxLabel.style.color = '#e74c3c';
+                        setTimeout(() => maxLabel.style.color = 'var(--text)', 1500);
+                    }
+                }
+            });
+        }
+
+        const createBookingId = () => {
+            const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            const rand = Math.floor(1000 + Math.random() * 9000);
+            return `HD-${date}-${rand}`;
+        };
+
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const submitBtn = document.getElementById('bookingSubmitBtn');
+                bookingError.style.display = 'none';
+
+                if (!checkin.value || !checkout.value || checkout.value <= checkin.value) {
+                    bookingError.textContent = 'يرجى إدخال تواريخ صحيحة.';
+                    bookingError.style.display = 'block';
+                    return;
+                }
+
+                const phoneDigits = phoneInput ? phoneInput.value.replace(/\D+/g, '') : '';
+                if (!phoneDigits || phoneDigits.length < 5) {
+                    bookingError.textContent = 'يرجى إدخال رقم الهاتف بشكل صحيح.';
+                    bookingError.style.display = 'block';
+                    return;
+                }
+
+                const nights = Math.ceil((new Date(checkout.value) - new Date(checkin.value)) / 86400000);
+                const totalPrice = nights * currentRoomPrice;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'جاري المعالجة...';
+
+                try {
+                    const bookingId = createBookingId();
+                    const guestName = document.getElementById('b-name').value.trim();
+                    const guestEmail = document.getElementById('b-email').value.trim();
+                    const guestsCount = parseInt(document.getElementById('b-guests').value, 10) || 1;
+                    const phoneFull = getFullPhone();
+
+                    // Show confirmation modal immediately
+                    closeModal();
+
+                    const confModal = document.getElementById('confirmationModal');
+                    const btnWa = document.getElementById('btnConfirmWhatsapp');
+                    const btnEm = document.getElementById('btnConfirmEmail');
+
+                    if (confModal) {
+                        confModal.style.display = 'flex';
+
+                        // Detect user language
+                        const isArabic = (navigator.language || navigator.userLanguage || 'ar').startsWith('ar');
+
+                        let messageBody, emailSubject;
+                        if (isArabic) {
+                            messageBody = `مرحباً فندق الأحلام،\nأود تأكيد حجزي التالي:\n\nرقم الحجز: ${bookingId}\nالاسم: ${guestName}\nرقم الهاتف: ${phoneFull}\nالغرفة: ${currentRoomName}\nتاريخ الوصول: ${checkin.value}\nتاريخ المغادرة: ${checkout.value}\nعدد الضيوف: ${guestsCount}\nالسعر الإجمالي: $${totalPrice}\n\nأرجو تأكيد الحجز. شكراً لكم.`;
+                            emailSubject = `تأكيد حجز - ${bookingId}`;
+                        } else {
+                            messageBody = `Hello Al-Ahlam Hotel,\nI would like to confirm my booking:\n\nBooking ID: ${bookingId}\nName: ${guestName}\nPhone: ${phoneFull}\nRoom: ${currentRoomName}\nCheck-in: ${checkin.value}\nCheck-out: ${checkout.value}\nGuests: ${guestsCount}\nTotal Price: $${totalPrice}\n\nPlease confirm my reservation. Thank you.`;
+                            emailSubject = `Booking Confirmation - ${bookingId}`;
+                        }
+
+                        if (btnWa) btnWa.onclick = () => window.open(`https://wa.me/71094407?text=${encodeURIComponent(messageBody)}`, '_blank');
+                        if (btnEm) btnEm.onclick = () => window.location.href = `mailto:ghassanobeid7@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(messageBody)}`;
+                    }
+
+                    // Save to Firebase in the background (non-blocking)
+                    addDoc(collection(db, 'bookings'), {
+                        bookingId: bookingId,
+                        guestName: guestName,
+                        guestEmail: guestEmail,
+                        phone: phoneFull,
+                        guests: guestsCount,
+                        room: currentRoomKey,
+                        roomName: currentRoomName,
+                        roomPrice: currentRoomPrice,
+                        checkin: checkin.value,
+                        checkout: checkout.value,
+                        nights: nights,
+                        totalPrice: totalPrice,
+                        status: 'pending',
+                        createdAt: serverTimestamp()
+                    }).catch(error => console.error("Firebase Add Error:", error));
+
+                } catch (error) {
+                    console.error("General Error:", error);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span id="bookingBtnText">تأكيد الحجز</span>';
+                }
+            });
+        }
+
+        const confModal = document.getElementById('confirmationModal');
+        const closeConfModal = document.getElementById('closeConfirmModal');
+        if (closeConfModal && confModal) {
+            closeConfModal.addEventListener('click', () => confModal.style.display = 'none');
+            confModal.addEventListener('click', (e) => {
+                if (e.target === confModal) confModal.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>
