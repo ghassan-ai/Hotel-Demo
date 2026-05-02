@@ -1129,7 +1129,7 @@ body { color: #e0e0e0; }
 .section-title { color: #ffffff !important; }
 
 /* Cards & Containers - Glassmorphism */
-.room-card, .service-card, .testimonial-card, .contact-item, .booking-form, .booking-summary {
+.room-card, .service-card, .testimonial-card, .contact-item, .booking-summary {
     background: rgba(255, 255, 255, 0.03) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
@@ -1143,6 +1143,15 @@ body { color: #e0e0e0; }
     box-shadow: 0 15px 40px rgba(0,0,0,0.7) !important;
 }
 
+.booking-modal {
+    background: #121212 !important;
+    border: 1px solid rgba(201, 168, 76, 0.2) !important;
+}
+
+.booking-form {
+    background: transparent !important;
+}
+
 /* Typography inside dark cards */
 .room-content h3, .service-card h3, .testimonial-author h4, .contact-item h4 { color: #ffffff !important; }
 .room-content p, .service-card p, .testimonial-text, .contact-item p { color: #a8a8a8 !important; }
@@ -1153,12 +1162,19 @@ body { color: #e0e0e0; }
 /* Booking Form Elements */
 .booking-form label { color: #ffffff !important; }
 .booking-form-group input, .booking-form-group select {
-    background: rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.booking-form-group input::placeholder {
+    color: #a0a0a0 !important;
+}
+.booking-form-group select option {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
 }
 .booking-form-group input:focus, .booking-form-group select:focus {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
     border-color: var(--primary) !important;
 }
 .summary-row span:last-child { color: #ffffff !important; }
