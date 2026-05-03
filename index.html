@@ -430,7 +430,7 @@
                         <div class="booking-form-group booking-form-full">
                             <label><i class="fas fa-phone"></i> رقم الهاتف</label>
                             <div class="phone-input-wrap">
-                                <input type="tel" id="b-phone" required placeholder="رقم هاتفك" inputmode="tel">
+                                <input type="tel" id="b-phone" required placeholder="رقم هاتفك" inputmode="tel" dir="ltr">
                             </div>
                         </div>
                     </div>
@@ -594,6 +594,11 @@
             },
             utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js',
         });
+        const itiContainer = phoneInput.closest('.iti');
+        if (itiContainer) {
+            itiContainer.classList.remove('iti--rtl');
+            itiContainer.setAttribute('dir', 'ltr');
+        }
         const bookButtons = document.querySelectorAll('.btn-book');
 
         const roomCards = Array.from(document.querySelectorAll('.room-card'));

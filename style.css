@@ -1969,19 +1969,41 @@ body.modal-open {
     direction: ltr;
 }
 
+.phone-input-wrap .iti--allow-dropdown .iti__flag-container,
+.phone-input-wrap .iti--separate-dial-code .iti__flag-container {
+    left: 0 !important;
+    right: auto !important;
+}
+
+.phone-input-wrap .iti--rtl {
+    direction: ltr;
+}
+
+.phone-input-wrap .iti--rtl .iti__flag-container {
+    left: 0 !important;
+    right: auto !important;
+}
+
+.phone-input-wrap .iti--rtl input[type="tel"] {
+    padding-left: 56px !important;
+    padding-right: 16px !important;
+    text-align: left;
+}
+
 /* Match our input styling but let iti handle padding-left dynamically */
 .phone-input-wrap .iti input[type="tel"] {
     width: 100%;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     padding-right: 16px !important;
-    /* DO NOT override padding-left so the flag has space */
-    border: 2px solid var(--gray-2) !important;
+    /* Keep left padding so the flag/dial code stays on the left */
+    padding-left: 56px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
     border-radius: 12px !important;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    color: var(--dark);
-    background: var(--gray) !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     transition: border-color 0.3s, box-shadow 0.3s;
     outline: none !important;
     direction: ltr;
@@ -1993,7 +2015,7 @@ body.modal-open {
 .phone-input-wrap .iti input[type="tel"]:focus {
     border-color: var(--primary) !important;
     box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.12) !important;
-    background: var(--light) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
 }
 
 .iti__dropdown-content {
